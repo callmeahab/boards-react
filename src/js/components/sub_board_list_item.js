@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react'
+import {Link} from 'react-router'
 
-export default class SubBoardListItem extends Component {
+export default class SubBoardListItem extends React.Component {
   render() {
     const {sub_board} = this.props
     return (
-      <div class="list-group">
-        <a href="#" class="list-group-item active">
-          <h4 class="list-group-item-heading">{sub_board.name}</h4>
-          <p class="list-group-item-text">{sub_board.description}</p>
-        </a>
+      <div className="list-group">
+        <Link to={`/category/${sub_board.url}/topics`} className="list-group-item active">
+          <h4 className="list-group-item-heading">{sub_board.name}</h4>
+          <p className="list-group-item-text">{sub_board.description}</p>
+        </Link>
       </div>
     );
   }
