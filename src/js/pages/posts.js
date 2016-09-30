@@ -4,6 +4,12 @@ import PostItem from '../components/post_item'
 
 export default class Posts extends React.Component {
   render() {
+    const selected_topic = {
+      id: 1, title: 'Topic Title 1', url: 'url1'
+    }
+    const selected_sub_board = {
+      id: 1, path: 'path1', name: 'Politics', description: 'LoremIspum shit...'
+    }
     const posts = [
       {id: 1, body: "Some important message 1", username: "Milovan1"},
       {id: 2, body: "Some important message 2", username: "Milovan2"},
@@ -15,7 +21,7 @@ export default class Posts extends React.Component {
      })
     return (
       <div>
-        <h3>Posts</h3>
+        <h3>Posts - {selected_topic.title}</h3>
         <ul>
           {posts}
         </ul>
