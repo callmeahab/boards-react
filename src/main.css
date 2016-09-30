@@ -1,0 +1,17 @@
+.sub-board {
+  width: 100%;
+  display: inline-block;
+}
+.sub-board-name-and-description {
+  float: left;
+}
+.sub-board-last-post {
+  float: right;
+}
+p.sub-board-last-post-title {
+  margin: 0px;
+}
+p.sub-board-last-post-user {
+  float: right;
+  margin: 0px;
+}
