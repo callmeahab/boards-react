@@ -8,10 +8,15 @@
 .sub-board-last-post {
   float: right;
 }
-p.sub-board-last-post-title {
-  margin: 0px;
+p.sub-board-last-post-title-and-content {
+  float: left;
+  margin: 0px 5px 0px 0px;
 }
 p.sub-board-last-post-user {
+  float: right;
+  margin: 0px;
+}
+p.sub-board-last-post-post {
   float: right;
   margin: 0px;
 }
