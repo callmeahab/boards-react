@@ -21,10 +21,12 @@ export default class Posts extends React.Component {
      })
     return (
       <div>
-        <h3>Posts - {selected_topic.title}</h3>
-        <ul>
+        <div className="topic-title">
+          <h3 className="topic-title">Posts - {selected_topic.title}</h3>
+        </div>
+        <div className="all-posts">
           {posts}
-        </ul>
+        </div>
       </div>
     )
   }
