@@ -20,7 +20,7 @@ export default class Topic extends React.Component {
     ].map((topic) => {
       return <TopicListItem key={topic.id} topic={topic} sub_board={selected_sub_board}/>
     })
-
+    
     let content = topics
     if (this.props.children !== null) content = this.props.children
 
