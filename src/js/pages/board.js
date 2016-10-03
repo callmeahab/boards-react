@@ -1,14 +1,12 @@
 import React from 'react'
-import {observer} from 'mobx-react'
-
-import store from '../store'
+import {observer, inject} from 'mobx-react'
 
 import SubBoardListItem from '../components/sub_board_list_item'
 
-@observer
+@observer(['store'])
 export default class Board extends React.Component {
   render() {
-    const sub_boards = store.subBoardStore.sub_boards
+    const sub_boards = this.props.store.subBoardStore.sub_boards
       .map((sub_board) => {
         return <SubBoardListItem sub_board={sub_board} key={sub_board.id} />
       })
