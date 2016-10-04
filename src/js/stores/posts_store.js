@@ -1,4 +1,7 @@
 import {observable, action, computed, autorun} from 'mobx'
+import axios from 'axios'
+import API_BASE from './api_base'
+import viewStore from './view_store'
 
 class Post {
   @observable id
@@ -10,8 +13,35 @@ class Post {
   @observable body
 
   constructor(post) {
-    this.id = sub_board.id
-    this.board_id = sub_board.board_id
-    this.name = sub_board.name
+    this.id = post.id
+    this.topic_id = post.topic_id
+    this.sub_board_id = post.sub_board_id
+    this.board_id = post.board_id
+    this.user_id = post.user_id
+    this.username_id = post.username_id
+    this.body = post.body
+    this.name = post.name
   }
 }
+
+class PostStore {
+  @observable posts = []
+
+  @action fetchPosts() {
+    axios
+      .get(`${API_BASE}/boards/${viewStore.board_id}/sub_boards/19/topics/${viewStore.selected_topic}`)
+      .then((response) => {
+        console.log(response)
+        this.posts.replace(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+}
+
+var postStore = new PostStore()
+autorun(() => {
+  postStore.fetchPosts()  
+})
+export default postStore
