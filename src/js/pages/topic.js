@@ -6,10 +6,10 @@ import TopicListItem from '../components/topic_list_item'
 @observer(['store'])
 export default class Topic extends React.Component {
   render() {
-    console.log(this.props.store)
+    const {selected_sub_board} = this.props.store.viewStore
     const topics = this.props.store.topicsStore.topics
       .map((topic) => {
-        return <TopicListItem topic={topic} key={topic.id} />
+        return <TopicListItem topic={topic} key={topic.id} sub_board={selected_sub_board} />
       })
     
     let content = topics

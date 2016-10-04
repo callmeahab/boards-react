@@ -6,7 +6,7 @@ export default class SubBoardListItem extends React.Component {
     const {sub_board} = this.props
     return (
       <div className="list-group">
-        <Link to={`/category/${sub_board.url}/topics`} className="list-group-item active">
+        <Link to={`/category/${sub_board.slug}/topics`} className="list-group-item active">
           <div className="sub-board">
             <div className="sub-board-name-and-description">
               <h4 className="list-group-item-heading">{sub_board.name}</h4>

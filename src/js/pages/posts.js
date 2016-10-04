@@ -6,8 +6,8 @@ import PostItem from '../components/post_item'
 @observer(['store'])
 export default class Posts extends React.Component {
   render() {
-
-     const posts = this.props.store.postsStore.posts
+    const {selected_topic, selected_sub_board} = this.props.store.viewStore
+    const posts = this.props.store.postsStore.posts
       .map((post) => {
         return <PostItem post={post} key={post.id} />
       })

@@ -15,9 +15,8 @@ class TopicStore {
 
   @action fetchTopics() {
     axios
-      .get(`${API_BASE}/boards/${viewStore.board_id}/sub_boards/${viewStore.selected_subboard}`)
+      .get(`${API_BASE}/boards/${viewStore.board.id}/sub_boards/${viewStore.selected_sub_board.id}/topics`)
       .then((response) => {
-        console.log(response)
         this.topics.replace(response.data)
       })
       .catch((error) => {

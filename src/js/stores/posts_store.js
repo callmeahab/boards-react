@@ -20,7 +20,6 @@ class Post {
     this.user_id = post.user_id
     this.username_id = post.username_id
     this.body = post.body
-    this.name = post.name
   }
 }
 
@@ -29,9 +28,8 @@ class PostStore {
 
   @action fetchPosts() {
     axios
-      .get(`${API_BASE}/boards/${viewStore.board_id}/sub_boards/19/topics/${viewStore.selected_topic}`)
+      .get(`${API_BASE}/boards/${viewStore.board.id}/sub_boards/${viewStore.selected_sub_board.id}/topics/${viewStore.selected_topic.id}/posts`)
       .then((response) => {
-        console.log(response)
         this.posts.replace(response.data)
       })
       .catch((error) => {

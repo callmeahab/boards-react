@@ -14,9 +14,8 @@ class SubBoardStore {
 
   @action fetchSubBoards() {
     axios
-      .get(`${API_BASE}/boards/${viewStore.board_id}/sub_boards`)
+      .get(`${API_BASE}/boards/${viewStore.board.id}/sub_boards`)
       .then((response) => {
-        console.log(response)
         this.sub_boards.replace(response.data)
       })
       .catch((error) => {

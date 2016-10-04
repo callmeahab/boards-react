@@ -4,7 +4,7 @@ export default class PostItem extends React.Component {
   render() {
     const {post} = this.props
     return (
-      <div className="post" key={post.id}>
+      <div className="post">
         <div className="post-info">
           <div className="post-info-user">
             <strong>{post.username}</strong>
