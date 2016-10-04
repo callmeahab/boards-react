@@ -5,7 +5,7 @@ import TopicListItem from '../components/topic_list_item'
 export default class SubBoard extends React.Component {
   render() {
     const selected_sub_board = {
-      id: 1, path: 'path1', name: 'Politics', description: 'LoremIspum shit...'
+      id: 19, path: 'path1', name: 'Politics', description: 'LoremIspum shit...'
     }
     return (
       <div className="list-group">
