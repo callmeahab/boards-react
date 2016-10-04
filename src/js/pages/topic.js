@@ -16,7 +16,7 @@ export default class Topic extends React.Component {
     if (this.props.children !== null) content = this.props.children
 
     return (
-      <div className="container">
+      <div>
         {content}
       </div>
     )

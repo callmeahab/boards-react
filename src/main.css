@@ -76,3 +76,32 @@ img.post-info-user-image {
   padding: 0px 10px;
   width: 85%;
 }
+
+/*** RESPONSIVE ***/
+
+@media (max-width: 767px) {
+  .post-info {
+    width: 100% !important;
+    float: none !important;
+    text-align: left;
+    display: inline-block;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 0px 10px;
+    margin-top: 10px !important;
+  }
+  .post-info-user-image {
+    float: left !important;
+    margin-right: 5px;
+  }
+  .post-info-user-topics-count {
+    text-align: left !important;
+    margin-top: 20px;
+  }
+  .post-info-user-posts-count {
+    text-align: left !important;
+  }
+  .post-body {
+    width: 100% !important;
+    float: none !important;
+  }
+}
